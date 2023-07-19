@@ -1,10 +1,14 @@
 package com.sinfloo.modelo;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Table(name = "Persona")
@@ -29,6 +33,19 @@ public class Persona {
 	@Column
 	private String telefono;
 	
+	// RELACIONES
+			@OneToMany(mappedBy="persona", cascade = CascadeType.ALL)
+			private List<Administrador> administrador;
+		
+			
+			/*
+			@OneToMany(mappedBy="persona", cascade = CascadeType.ALL)
+			private List<Cliente> cliente;
+			
+			
+			
+		//
+	*/
 	
 	public Persona() {
 		// TODO Auto-generated constructor stub
