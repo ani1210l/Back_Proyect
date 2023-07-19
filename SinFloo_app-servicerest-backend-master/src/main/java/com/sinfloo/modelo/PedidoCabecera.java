@@ -22,13 +22,14 @@ import javax.persistence.UniqueConstraint;
 
 @Entity
 @Table(name = "pedidoCabeceras", uniqueConstraints = {@UniqueConstraint(columnNames ={"id_cliente"})})
-public class PedidoCabecera implements Serializable {
+public class PedidoCabecera {
 
-	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private int id_pedidoC;
+	@Column	
 	private String pedid_estado;
 
 	@Column(name = "pedid_fecha")
