@@ -31,8 +31,6 @@ private String usuario;
 private Persona persona;
 
 
-
-
 public Administrador() {
 	super();
 }

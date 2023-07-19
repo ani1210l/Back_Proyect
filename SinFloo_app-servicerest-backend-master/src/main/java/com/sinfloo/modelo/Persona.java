@@ -42,6 +42,8 @@ public class Persona {
 			@OneToMany(mappedBy="persona", cascade = CascadeType.ALL)
 			private List<Cliente> cliente;
 			
+			
+			
 		//
 	*/
 	
