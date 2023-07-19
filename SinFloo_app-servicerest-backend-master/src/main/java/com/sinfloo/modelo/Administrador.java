@@ -1,4 +1,4 @@
-package com.sinfloo.controler;
+package com.sinfloo.modelo;
 
 public class Administrador {
 
