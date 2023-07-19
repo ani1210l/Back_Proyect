@@ -1,6 +1,6 @@
 package com.sinfloo.controler;
 
-public class Administrador {
+public class AdministradorControlador {
 	private int sd;
 
 }
