@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 
 
 @Entity
-@Table(name = "facturaCabeceras", uniqueConstraints = {@UniqueConstraint(columnNames ={"id_cliente"})})
+@Table(name = "facturaCabeceras")
 
 public class FacturaCabecera {
 
