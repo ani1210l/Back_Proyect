@@ -5,17 +5,18 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.sinfloo.interfaces.ClienteInterface;
 import com.sinfloo.modelo.Cliente;
-
+@Repository
 public class ClienteDAO implements ClienteInterface{
 	@Autowired
 	JdbcTemplate template;
 
 	@Override
 	public List<Map<String, Object>> listar() {
-		List<Map<String, Object>> list = template.queryForList("SELECT * FROM cliente JOIN persona ON cliente.id_persona= persona.id_persona");
+		List<Map<String, Object>> list = template.queryForList("SELECT * FROM cliente JOIN persona ON cliente.id_persona= persona.id");
 		return list;
 	}
 
