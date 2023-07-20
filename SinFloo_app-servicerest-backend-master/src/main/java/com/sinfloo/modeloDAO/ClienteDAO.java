@@ -16,7 +16,7 @@ public class ClienteDAO implements ClienteInterface{
 
 	@Override
 	public List<Map<String, Object>> listar() {
-		List<Map<String, Object>> list = template.queryForList("SELECT * FROM cliente JOIN persona ON cliente.id_persona= persona.id");
+		List<Map<String, Object>> list = template.queryForList("SELECT * FROM clientes JOIN persona ON clientes.id_persona= persona.id");
 		return list;
 	}
 
