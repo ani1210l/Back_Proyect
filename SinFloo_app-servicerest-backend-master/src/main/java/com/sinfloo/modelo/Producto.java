@@ -25,7 +25,7 @@ public class Producto {
 	@Column
 	private String prod_descripcion;
 	@Column
-	private String prod_precio;
+	private Double prod_precio;
 	@Column
 	private Byte prod_img;
 	
@@ -63,12 +63,13 @@ public class Producto {
 	public void setProd_img(Byte prod_img) {
 		this.prod_img = prod_img;
 	}
-	public String getProd_precio() {
+	public Double getProd_precio() {
 		return prod_precio;
 	}
-	public void setProd_precio(String prod_precio) {
+	public void setProd_precio(Double prod_precio) {
 		this.prod_precio = prod_precio;
 	}
+	
 
 	
 	
