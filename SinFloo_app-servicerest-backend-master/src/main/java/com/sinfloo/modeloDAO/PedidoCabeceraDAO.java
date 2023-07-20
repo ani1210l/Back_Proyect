@@ -27,14 +27,14 @@ JdbcTemplate template;
 
 	@Override
 	public int add(PedidoCabecera c) {
-		String sql = "INSERT INTO `pedidoCabecera` (`pedid_fecha`, `pedid_estado`,id_cliente) VALUES (?, ?,?);";
-		return template.update(sql, c.getPed_fecha(), c.getPedid_estado(),c.getCliente());
+		String sql = "INSERT INTO `pedidoCabecera` (`pedid_fecha`, `id_cliente`) VALUES (?, ?,?);";
+		return template.update(sql, c.getPed_fecha(),c.getCliente());
 	}
 
 	@Override
 	public int edit(PedidoCabecera c) {
-		String sql="UPDATE `pedidoCabecera` SET `pedid_fecha` = ?, `pedid_estado` = ? WHERE `id_pedido` = ?";		
-		return template.update(sql,c.getPed_fecha(),c.getPedid_estado(),c.getId_pedidoC());
+		String sql="UPDATE `pedidoCabecera` SET `pedid_fecha` = ? WHERE `id_pedido` = ?";		
+		return template.update(sql,c.getPed_fecha(),c.getId_pedidoC());
 	}
 
 

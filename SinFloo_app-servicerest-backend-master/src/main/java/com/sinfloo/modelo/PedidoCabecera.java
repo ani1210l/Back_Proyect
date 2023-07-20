@@ -29,8 +29,7 @@ public class PedidoCabecera {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column
 	private int id_pedidoC;
-	@Column	
-	private String pedid_estado;
+
 
 	@Column(name = "pedid_fecha")
 	@Temporal(TemporalType.DATE)
@@ -56,9 +55,7 @@ public class PedidoCabecera {
 
 
 
-	public String getPedid_estado() {
-		return pedid_estado;
-	}
+	
 
 	public int getId_pedidoC() {
 		return id_pedidoC;
@@ -68,10 +65,7 @@ public class PedidoCabecera {
 		this.id_pedidoC = id_pedidoC;
 	}
 
-	public void setPedid_estado(String pedid_estado) {
-		this.pedid_estado = pedid_estado;
-	}
-
+	
 	public Date getPed_fecha() {
 		return ped_fecha;
 	}
