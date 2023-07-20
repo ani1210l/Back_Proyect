@@ -30,7 +30,7 @@ public class ProductoDao implements ProductoInterface {
 
 	@Override
 	public int add(Producto p) {
-		String sql = "insert into producto(prod_cantidad,prod_cod,prod_descripcion)values(?,?)";
+		String sql = "insert into producto(prod_cantidad,prod_cod,prod_descripcion,prod_precio,prod_img)values(?,?,?,?,?)";
 		return template.update(sql, p.getProd_catidad(), p.getProd_descripcion());
 	}
 
