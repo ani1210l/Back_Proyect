@@ -45,6 +45,10 @@ public class PedidoDetalleDAO implements PedidoDetalleInterfaz{
 	public int delete(int id) {
 		String sql="delete from cliente where id=?";
 		return template.update(sql,id);
+		
+		
+		
+		
 	}
 
 }

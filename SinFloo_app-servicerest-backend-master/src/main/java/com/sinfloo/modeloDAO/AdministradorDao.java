@@ -22,7 +22,7 @@ JdbcTemplate template;
 
 @Override
 public List<Map<String, Object>> listar() {
-	List<Map<String, Object>> list = template.queryForList("select * from categorias");
+	List<Map<String, Object>> list = template.queryForList("select * from administradores");
 	return list;
 }
 
